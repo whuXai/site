@@ -3,11 +3,11 @@
   <title>珈山体工队</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/site/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://whuxai.github.io/site/"/>
   <updated>2019-09-02T17:43:07.093Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://whuxai.github.io/site/</id>
   
   <author>
     <name>Once</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Test World</title>
-    <link href="http://yoursite.com/2019/09/02/hello-world/"/>
-    <id>http://yoursite.com/2019/09/02/hello-world/</id>
+    <link href="https://whuxai.github.io/site/2019/09/02/hello-world/"/>
+    <id>https://whuxai.github.io/site/2019/09/02/hello-world/</id>
     <published>2019-09-02T12:45:13.950Z</published>
     <updated>2019-09-02T17:43:07.093Z</updated>
     
