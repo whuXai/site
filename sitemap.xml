@@ -4,7 +4,12 @@
 
     <sitemap>
         <loc>https://whuxai.com/post-sitemap.xml</loc>
-        <lastmod>2019-09-02T17:43:07.093Z</lastmod>
+        <lastmod>2019-09-03T05:39:12.925Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://whuxai.com/tag-sitemap.xml</loc>
+        <lastmod>2019-09-03T05:39:12.925Z</lastmod>
     </sitemap>
 
 </sitemapindex>
