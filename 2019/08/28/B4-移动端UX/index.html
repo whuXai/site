@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="UX,Mobile,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="珈山体工队" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="2014年移动端设备的使用率已经超过桌面端，在移动设备上设计一个好的用户体验时，使用常规的设计方法是不够的，用户在移动设备上的理解能力要降低50%左右，这意味着内容、导航和可视化设计元素要比桌面端的直观个两倍，屏幕变小带来容错度的降低，设计师必须要掌握相应的新技能，用于创建易于使用的移动用户体验。 本章节基于Frank Spillers的经验分享，在经验主义的基础上的，结合业界研究和实践中提炼出来">
+<meta name="keywords" content="UX,Mobile">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B4-移动端UX">
+<meta property="og:url" content="https://whuxai.com/2019/08/28/B4-移动端UX/index.html">
+<meta property="og:site_name" content="珈山体工队">
+<meta property="og:description" content="2014年移动端设备的使用率已经超过桌面端，在移动设备上设计一个好的用户体验时，使用常规的设计方法是不够的，用户在移动设备上的理解能力要降低50%左右，这意味着内容、导航和可视化设计元素要比桌面端的直观个两倍，屏幕变小带来容错度的降低，设计师必须要掌握相应的新技能，用于创建易于使用的移动用户体验。 本章节基于Frank Spillers的经验分享，在经验主义的基础上的，结合业界研究和实践中提炼出来">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-04T11:02:25.207Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B4-移动端UX">
+<meta name="twitter:description" content="2014年移动端设备的使用率已经超过桌面端，在移动设备上设计一个好的用户体验时，使用常规的设计方法是不够的，用户在移动设备上的理解能力要降低50%左右，这意味着内容、导航和可视化设计元素要比桌面端的直观个两倍，屏幕变小带来容错度的降低，设计师必须要掌握相应的新技能，用于创建易于使用的移动用户体验。 本章节基于Frank Spillers的经验分享，在经验主义的基础上的，结合业界研究和实践中提炼出来">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://whuxai.com/2019/08/28/B4-移动端UX/">
+
+
+
+
+
+  <title>B4-移动端UX | 珈山体工队</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">珈山体工队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://whuxai.com/2019/08/28/B4-移动端UX/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Once">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="珈山体工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">B4-移动端UX</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-28T21:00:00+08:00">
+                2019-08-28
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-04T19:02:25+08:00">
+                2019-09-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/UX-学习课程/" itemprop="url" rel="index">
+                    <span itemprop="name">UX 学习课程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>2014年移动端设备的使用率已经超过桌面端，在移动设备上设计一个好的用户体验时，使用常规的设计方法是不够的，用户在移动设备上的理解能力要降低50%左右，这意味着内容、导航和可视化设计元素要比桌面端的直观个两倍，屏幕变小带来容错度的降低，设计师必须要掌握相应的新技能，用于创建易于使用的移动用户体验。</p>
+<p>本章节基于Frank Spillers的经验分享，在经验主义的基础上的，结合业界研究和实践中提炼出来的确凿证据，学习如何理解、设计、评估和验证移动端的用户体验。</p>
+<a id="more"></a>
+
+<h1 id="一，基础知识"><a href="#一，基础知识" class="headerlink" title="一，基础知识"></a>一，基础知识</h1><p>1，Spillers的介绍视频，<a href="https://www.youtube.com/watch?v=_o0YlppsinI" target="_blank" rel="noopener">Part 1</a>，<a href="https://www.youtube.com/watch?v=CxghGT_Vh7g" target="_blank" rel="noopener">Part 2</a>，<a href="https://www.youtube.com/watch?v=C3s4_hnTqIM" target="_blank" rel="noopener">Part 3</a>；<br>2，移动端如何处理内容，<a href="https://www.interaction-design.org/literature/article/one-size-fits-all-definitely-not-in-task-oriented-design-for-mobile" target="_blank" rel="noopener">随着设备size需要相应变化</a>，<a href="https://theblog.adobe.com/designing-for-different-screens-and-devices-7-steps-to-creating-a-great-ux/" target="_blank" rel="noopener">Adobe也有类似文章</a>，还有<a href="https://www.interaction-design.org/literature/article/adaptive-vs-responsive-design" target="_blank" rel="noopener">Adaptive和Responsive设计的选择</a>；<br>3，移动设备使用的场景 ，<a href="https://www.interaction-design.org/literature/article/the-context-of-mobile-usage-the-big-picture" target="_blank" rel="noopener">对应文章</a>；<br>4，充分利用群体效应-社会认同和用户体验 ，<a href="https://www.interaction-design.org/literature/article/making-use-of-the-crowd-social-proof-and-the-user-experience" target="_blank" rel="noopener">对应文章</a>，<a href="https://www.nngroup.com/articles/social-proof-ux/" target="_blank" rel="noopener">NN/g类似的文章</a>；<br>5，移动端APP的原型设计：先做模拟，<a href="https://www.interaction-design.org/literature/article/don-t-build-it-fake-it-first-prototyping-for-mobile-apps" target="_blank" rel="noopener">对应文章</a>；</p>
+<h1 id="二，用户体验的要素"><a href="#二，用户体验的要素" class="headerlink" title="二，用户体验的要素"></a>二，用户体验的要素</h1><p>1，移动端用户体验的要素，可以<a href="https://www.nngroup.com/articles/state-mobile-ux/" target="_blank" rel="noopener">参考NN/g的文章</a>或者<a href="https://storage.googleapis.com/think-emea/docs/article/Mobile_App_UX_Principles.pdf" target="_blank" rel="noopener">Google的UX 原则</a>；<br>2，以用户为中心的移动端设计方法和可用的五个步骤落实设计，<a href="https://www.interaction-design.org/literature/article/a-user-centred-approach-to-mobile-design-and-a-5-stage-process-for-you-to-use" target="_blank" rel="noopener">对应文章</a>；<br>3，移动第一和移动端计算的力量，<a href="https://www.interaction-design.org/literature/article/mobile-first-and-the-power-of-mobile-computing" target="_blank" rel="noopener">对应文章</a>；<br>4，内容已死的报告可能被夸大了，移动端一样内容为王，<a href="https://www.interaction-design.org/literature/article/reports-of-content-s-demise-may-have-been-exaggerated-content-is-king-for-mobile-too" target="_blank" rel="noopener">对应文章</a>；<br>5，功能性和移动端设计-不要让界面内容缩水，专注于任务，<a href="https://www.interaction-design.org/literature/article/functionality-and-mobile-design-don-t-shrink-the-screen-focus-on-the-tasks" target="_blank" rel="noopener">对应文章</a>；<br>6，Micro-moments，你在为他们设计吗，<a href="https://www.interaction-design.org/literature/article/micro-moments-are-you-designing-for-them" target="_blank" rel="noopener">对应文章</a>；<br>7，问题的核心，移动时代的信息架构，<a href="https://www.interaction-design.org/literature/article/the-heart-of-the-matter-information-architecture-in-the-mobile-age" target="_blank" rel="noopener">对应文章</a>；<br>8，理解移动端APP用户的思维方式-为移动端APP做用户研究，<a href="https://www.interaction-design.org/literature/article/getting-into-the-mobile-app-user-s-mind-user-research-for-mobile-applications" target="_blank" rel="noopener">对应文章</a>；<br>9，移动端可用性调研-和桌面端应用的重要区别，<a href="https://www.interaction-design.org/literature/article/mobile-usability-research-the-important-differences-from-the-desktop" target="_blank" rel="noopener">对应文章</a>；<br>10，移动端APP的远程研究方法，<a href="https://www.interaction-design.org/literature/article/remote-research-methods-for-mobile-applications" target="_blank" rel="noopener">对应文章</a>；<br>11，如果你的用户找不到你，那你不会拥有用户-移动端APP和可发现性，<a href="https://www.interaction-design.org/literature/article/if-your-user-can-t-find-you-you-won-t-have-any-users-mobile-applications-and-discoverability" target="_blank" rel="noopener">对应文章</a>；<br>12，让你的APP进入数百万人的手中，移动应用的市场营销，<a href="https://www.interaction-design.org/literature/article/getting-your-app-into-the-hands-of-millions-marketing-for-mobile-apps" target="_blank" rel="noopener">对应文章</a>；</p>
+<h1 id="三，适应任务"><a href="#三，适应任务" class="headerlink" title="三，适应任务"></a>三，适应任务</h1><p>1，适应任务的设计，<a href="http://hcibib.org/tcuid/chap-1.html" target="_blank" rel="noopener">参考文章</a>；<br>3，为移动环境设计-一些简单的设计指南，<a href="https://www.interaction-design.org/literature/article/designing-for-the-mobile-environment-some-simple-guidelines" target="_blank" rel="noopener">对应文章</a>；<br>4，使用移动应用-好的移动端设计的指动、眼动测试，<a href="https://www.interaction-design.org/literature/article/using-mobile-apps-the-one-thumb-one-eyeball-test-for-good-mobile-design" target="_blank" rel="noopener">对应文章</a>，也可以看<a href="https://www.lukew.com/ff/entry.asp?1664" target="_blank" rel="noopener">LukeW的文章</a>；<br>5，移动时代的认知摩擦让人头疼，<a href="https://www.interaction-design.org/literature/article/my-head-hurts-cognitive-friction-in-the-age-of-mobile" target="_blank" rel="noopener">对应文章</a>；<br>6，移动端用户体验的问题，<a href="https://www.interaction-design.org/literature/article/8-mobile-ux-issues-that-can-be-easily-fixed" target="_blank" rel="noopener">对应文章</a>；<br>8，不是你做的事情，而是你做的方式-移动端APP可用性的最佳实践，<a href="https://www.interaction-design.org/literature/article/it-ain-t-what-you-do-it-s-the-way-that-you-do-it-mobile-app-usability-best-practices" target="_blank" rel="noopener">对应文章</a>；<br>7，为移动设备而设计，<a href="https://www.uxmatters.com/mt/archives/2012/12/designing-for-users-and-their-devices.php" target="_blank" rel="noopener">参考文章</a>；<br>9，移动端设计和开发的用户画像，<a href="https://www.interaction-design.org/literature/article/user-personas-for-mobile-design-and-development-a-winning-technique-for-great-ux" target="_blank" rel="noopener">对应文章</a>；<br>11，创造欲望、渴望和移动端用户体验，<a href="https://www.interaction-design.org/literature/article/concept-desirability-and-the-mobile-user-experience" target="_blank" rel="noopener">对应文章</a>；<br>12，用户体验设计的关键问题：可用性和可取性Desirability，<a href="https://www.interaction-design.org/literature/article/key-question-in-user-experience-design-usability-vs-desirability" target="_blank" rel="noopener">对应文章</a>，参考<a href="https://theblog.adobe.com/usability-vs-desirability-ux-design/" target="_blank" rel="noopener">Adobe的文章</a>；<br>13，在你开始设计之前，请先走出办公室，<a href="https://www.interaction-design.org/literature/article/before-you-start-designing-it-s-time-to-get-out-of-the-building" target="_blank" rel="noopener">对应文章</a>；<br>14，一般非常有用的小说-设计中的心智模型，<a href="https://www.interaction-design.org/literature/article/a-very-useful-work-of-fiction-mental-models-in-design" target="_blank" rel="noopener">对应文章</a>，<a href="https://www.nngroup.com/articles/mental-models/" target="_blank" rel="noopener">NN/g的文章</a>；<br>15，移动端APP的概念模型，<a href="https://www.interaction-design.org/literature/article/we-think-therefore-it-is-conceptual-modelling-for-mobile-applications" target="_blank" rel="noopener">对应文章</a>；<br>16，如何通过任务分析提升你的用户体验设计，<a href="https://www.interaction-design.org/literature/article/task-analysis-a-ux-designer-s-best-friend" target="_blank" rel="noopener">对应文章</a>；</p>
+<p>Spillers介绍的移动端设计策略和流程，<a href="https://www.experiencedynamics.com/blog/2018/06/differentiating-your-mobile-ux-strategy" target="_blank" rel="noopener">对应视频</a>；</p>
+<h1 id="四、适配UI样式规范"><a href="#四、适配UI样式规范" class="headerlink" title="四、适配UI样式规范"></a>四、适配UI样式规范</h1><p>1，移动端的UI样式规范，<a href="https://www.experiencedynamics.com/approach/ui-style-guides" target="_blank" rel="noopener">Spillers的收集</a>，或者到<a href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns" target="_blank" rel="noopener">这10个网站</a>看看；<br>2，手机和平板的不同，<a href="https://www.oxgadgets.com/2018/04/tablet-vs-smartphone-ux-user-behaviour.html" target="_blank" rel="noopener">参考报道</a>；<br>3，你需要知道的智能手机和平板使用移动网络的不同，<a href="https://www.interaction-design.org/literature/article/what-you-need-to-know-about-smartphones-vs-tablet-use-of-the-mobile-internet" target="_blank" rel="noopener">对应文章</a>；<br>4，移动端隐喻-智能手机让我们变蠢了吗？<a href="https://www.interaction-design.org/literature/article/mobile-comprehension-do-smartphones-make-us-stupid" target="_blank" rel="noopener">对应文章</a>；<br>6，拟物化已死，但是拟物设计长存，<a href="https://www.interaction-design.org/literature/article/skeuomorphism-is-dead-long-live-skeuomorphism" target="_blank" rel="noopener">对应文章</a>；<br>7，Don’t Make Me Think-web用户体验的关键知识点，<a href="https://www.interaction-design.org/literature/article/don-t-make-me-think-key-learning-points-for-ux-design-for-the-web" target="_blank" rel="noopener">对应文章</a>；<br>8，让用户更容易使用-在移动APP内做好可发现性Discoverability设计，<a href="https://www.interaction-design.org/literature/article/make-it-easy-on-the-user-designing-for-discoverability-within-mobile-apps" target="_blank" rel="noopener">对应文章</a>；<br>12，Native vs Hybrid vs Responsive：哪款APP模式最适合你，<a href="https://www.interaction-design.org/literature/article/native-vs-hybrid-vs-responsive-what-app-flavour-is-best-for-you" target="_blank" rel="noopener">对应文章</a>，可以参考<a href="https://www.nngroup.com/articles/mobile-native-apps/" target="_blank" rel="noopener">NN/g</a>或者<a href="https://www.uxmatters.com/mt/archives/2018/08/mobile-apps-native-hybrid-and-webviews.php" target="_blank" rel="noopener">UXmatters</a>的文章；<br>11，移动端用户的体验周期，<a href="https://www.uxmatters.com/mt/archives/2011/10/the-lifecycle-of-a-mobile-app-a-users-perspective.php" target="_blank" rel="noopener">参考文章</a>；</p>
+<h1 id="五，UI移动组件和模板"><a href="#五，UI移动组件和模板" class="headerlink" title="五，UI移动组件和模板"></a>五，UI移动组件和模板</h1><p>1，移动端UI-组件和模板，<a href="https://vanseodesign.com/web-design/patterns-components-frameworks/" target="_blank" rel="noopener">对应文章</a>；<br>2，智能手机剖析-移动端开发需要设计师考虑的事情，<a href="https://www.interaction-design.org/literature/article/the-anatomy-of-a-smartphone-things-for-designers-to-consider-for-mobile-development" target="_blank" rel="noopener">对应文章</a>；<br>3，移动端的闪屏设计，<a href="https://www.interaction-design.org/literature/article/the-rumble-in-the-board-room-mobile-splash-screens-what-clients-want-and-what-they-should-get" target="_blank" rel="noopener">对应文章</a>；<br>4，移动端的用户输入，<a href="https://www.interaction-design.org/literature/article/user-input-and-the-mobile-user-experience-we-re-all-thumbs-now-or-maybe-not" target="_blank" rel="noopener">对应文章</a>；<br>5，移动端的用户资料，<a href="https://www.interaction-design.org/literature/article/tell-me-about-me-user-profiles-for-mobile-applications" target="_blank" rel="noopener">对应文章</a>；<br>6，移动端的地图使用，<a href="https://www.interaction-design.org/literature/article/getting-lost-and-found-maps-and-the-mobile-user-experience" target="_blank" rel="noopener">对应文章</a>，可以参考下<a href="https://www.nngroup.com/articles/mobile-maps-locations/" target="_blank" rel="noopener">NN/g的文章</a>；<br>7，移动端的帮助设计，<a href="https://www.interaction-design.org/literature/article/help-i-need-some-help-not-just-any-help-help-in-mobile-applications" target="_blank" rel="noopener">对应文章</a>；<br>8，移动端的搜索设计，<a href="https://www.interaction-design.org/literature/article/navigating-the-maze-of-mobile-apps-design-for-mobile-app-search" target="_blank" rel="noopener">对应文章</a>；<br>9，可用性测试评估，Spillers在IDF的视频：<a href="https://www.youtube.com/watch?v=KajP5JwJq5M" target="_blank" rel="noopener">Part 1</a>，<a href="https://www.youtube.com/watch?v=YK3qNn2G4hw" target="_blank" rel="noopener">Part 2</a>，<a href="https://www.youtube.com/watch?v=3KZ5yTCPNOo" target="_blank" rel="noopener">Part 3</a>，<a href="https://www.youtube.com/watch?v=Ke7MWqkhHlI" target="_blank" rel="noopener">Part 4</a>。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Once
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://whuxai.com/2019/08/28/B4-移动端UX/" title="B4-移动端UX">https://whuxai.com/2019/08/28/B4-移动端UX/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/UX/" rel="tag"># UX</a>
+          
+            <a href="/tags/Mobile/" rel="tag"># Mobile</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/27/B3-人机交互设计/" rel="next" title="B3-人机交互设计">
+                <i class="fa fa-chevron-left"></i> B3-人机交互设计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/29/B5-UX职业/" rel="prev" title="B5-UX职业">
+                B5-UX职业 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Once">
+          <p class="site-author-name" itemprop="name">Once</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/dN72lUjiTPcyEkZN/" title="UX大会" target="_blank">UX大会</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/i6xzBXPMDZwQ663r/" title="UX狮群" target="_blank">UX狮群</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/wvEWwNm5ZXMFEkst/" title="UX书单" target="_blank">UX书单</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/mcnJah3QMhoDuglJ/" title="UX课程" target="_blank">UX课程</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一，基础知识"><span class="nav-number">1.</span> <span class="nav-text">一，基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二，用户体验的要素"><span class="nav-number">2.</span> <span class="nav-text">二，用户体验的要素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三，适应任务"><span class="nav-number">3.</span> <span class="nav-text">三，适应任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、适配UI样式规范"><span class="nav-number">4.</span> <span class="nav-text">四、适配UI样式规范</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五，UI移动组件和模板"><span class="nav-number">5.</span> <span class="nav-text">五，UI移动组件和模板</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Once</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

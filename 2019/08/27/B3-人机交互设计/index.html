@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="UX,HCI,Interactions,交互设计,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="珈山体工队" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="我们希望和计算机之间的交互可以像和人对话一样直接明了，当然很多产品和服务都无法做到这点，有的可能是技术、成本限制，有的可以改善，涉及到人类心理学、情感化设计，还有特别的设计流程等等，而人机交互涵盖了这些改善人机关系的内容，帮助你理解计算机的目标用户，如何让相关产品和服务运行顺畅。 IDF这个课程基本上都是HCI专家Alan Dix的视频课程；他还写了本《人机交互》，不过被吐槽无聊和无趣。如果真觉得">
+<meta name="keywords" content="UX,HCI,Interactions,交互设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B3-人机交互设计">
+<meta property="og:url" content="https://whuxai.com/2019/08/27/B3-人机交互设计/index.html">
+<meta property="og:site_name" content="珈山体工队">
+<meta property="og:description" content="我们希望和计算机之间的交互可以像和人对话一样直接明了，当然很多产品和服务都无法做到这点，有的可能是技术、成本限制，有的可以改善，涉及到人类心理学、情感化设计，还有特别的设计流程等等，而人机交互涵盖了这些改善人机关系的内容，帮助你理解计算机的目标用户，如何让相关产品和服务运行顺畅。 IDF这个课程基本上都是HCI专家Alan Dix的视频课程；他还写了本《人机交互》，不过被吐槽无聊和无趣。如果真觉得">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-04T11:02:16.045Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B3-人机交互设计">
+<meta name="twitter:description" content="我们希望和计算机之间的交互可以像和人对话一样直接明了，当然很多产品和服务都无法做到这点，有的可能是技术、成本限制，有的可以改善，涉及到人类心理学、情感化设计，还有特别的设计流程等等，而人机交互涵盖了这些改善人机关系的内容，帮助你理解计算机的目标用户，如何让相关产品和服务运行顺畅。 IDF这个课程基本上都是HCI专家Alan Dix的视频课程；他还写了本《人机交互》，不过被吐槽无聊和无趣。如果真觉得">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://whuxai.com/2019/08/27/B3-人机交互设计/">
+
+
+
+
+
+  <title>B3-人机交互设计 | 珈山体工队</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">珈山体工队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://whuxai.com/2019/08/27/B3-人机交互设计/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Once">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="珈山体工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">B3-人机交互设计</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T21:00:00+08:00">
+                2019-08-27
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-04T19:02:16+08:00">
+                2019-09-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/UX-学习课程/" itemprop="url" rel="index">
+                    <span itemprop="name">UX 学习课程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>我们希望和计算机之间的交互可以像和人对话一样直接明了，当然很多产品和服务都无法做到这点，有的可能是技术、成本限制，有的可以改善，涉及到人类心理学、情感化设计，还有特别的设计流程等等，而人机交互涵盖了这些改善人机关系的内容，帮助你理解计算机的目标用户，如何让相关产品和服务运行顺畅。</p>
+<p>IDF这个课程基本上都是HCI专家Alan Dix的<a href="https://vimeo.com/user13215218" target="_blank" rel="noopener">视频课程</a>；他还写了本《<a href="https://book.douban.com/subject/1801393/" target="_blank" rel="noopener">人机交互</a>》，不过被吐槽无聊和无趣。<br>如果真觉得无聊，也可以试试<a href="https://www.youtube.com/watch?v=WW1g3UT2zww&list=PLLssT5z_DsK_nusHL_Mjt87THSTlgrsyJ" target="_blank" rel="noopener">斯坦福的课程视频</a>；</p>
+<p>Bill Moggridge的 <em>Designing Interactions</em> 中文版《<a href="https://book.douban.com/subject/6024020/" target="_blank" rel="noopener">关键设计报告</a>》对我的影响更多更积极，书+视频，五分推荐。<br>Jenifer Tidwell的 <em><a href="http://designinginterfaces.com" target="_blank" rel="noopener">Designing Interfaces</a></em> 中文版《<a href="https://book.douban.com/subject/25716088/" target="_blank" rel="noopener">界面设计模式</a>》也值得参考。</p>
+<a id="more"></a>
+
+<h1 id="一，基础知识点"><a href="#一，基础知识点" class="headerlink" title="一，基础知识点"></a>一，基础知识点</h1><p>1，HCI是什么、变化和趋势，<a href="https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/human-computer-interaction-brief-intro" target="_blank" rel="noopener">参考文章</a>；<br>2，执行和评估的鸿沟，直接看<a href="https://www.nngroup.com/articles/two-ux-gulfs-evaluation-execution/" target="_blank" rel="noopener">NN/g的文章</a>或者<a href="https://www.youtube.com/watch?v=bg4UwyPPZ6U" target="_blank" rel="noopener">诺曼的视频</a>吧；</p>
+<h1 id="二，UI设计样式"><a href="#二，UI设计样式" class="headerlink" title="二，UI设计样式"></a>二，UI设计样式</h1><h2 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h2><p>1，用视觉框架让设计更有结构，<br>可以参考Alax Dix的视频：<a href="https://vimeo.com/51666797" target="_blank" rel="noopener">设计和布局</a>、<a href="https://vimeo.com/51666799" target="_blank" rel="noopener">空白页</a>、<a href="https://vimeo.com/51666800" target="_blank" rel="noopener">物理设备</a>、<a href="https://vimeo.com/51666801" target="_blank" rel="noopener">用户行为</a>和<a href="https://vimeo.com/51669126" target="_blank" rel="noopener">掌控、合适的外观表现</a>；<br>2，Center Stage帮助用户聚焦在重要的事物上，<a href="https://www.interaction-design.org/literature/article/center-stage-help-the-user-focus-on-what-s-important" target="_blank" rel="noopener">对应文章</a>，或者参考下<a href="http://www.welie.com/patterns/showPattern.php?patternID=center-stage" target="_blank" rel="noopener">Welie的内容</a>；<br>3，如何运用movable pieces完成多任务处理，<a href="https://www.interaction-design.org/literature/article/how-to-use-movable-pieces-to-support-multitasking" target="_blank" rel="noopener">对应文章</a>；<br>4，用标题区域帮助用户略读内容，<a href="https://www.interaction-design.org/literature/article/help-users-skim-contents-with-titled-sections" target="_blank" rel="noopener">对应文章</a>；<br>5，如何使用响应式启动（响应式开关）来简化任务，<a href="https://www.interaction-design.org/literature/article/how-to-use-responsive-enabling-to-simplify-tasks" target="_blank" rel="noopener">对应文章</a>；responsive enabling的<a href="http://www.designinginterfaces.com/firstedition/index.php?page=Responsive_Enabling" target="_blank" rel="noopener">定义</a>，一个<a href="https://www.uxmatters.com/mt/archives/2015/07/simplify-your-ux-through-reduction.php" target="_blank" rel="noopener">可参考的原则</a>。</p>
+<h2 id="内容组织"><a href="#内容组织" class="headerlink" title="内容组织"></a>内容组织</h2><p>1，怎样利用slideshows吸引用户的注意力，<a href="https://www.nngroup.com/articles/designing-effective-carousels/" target="_blank" rel="noopener">对应文章</a>；<br>2，Two-Panel selectors分栏视图选择器简化调阅内容，<a href="https://www.interaction-design.org/literature/article/two-panel-selectors-for-easy-access-of-content" target="_blank" rel="noopener">对应文章</a>，或者 <a href="http://designinginterfaces.com/patterns/two-panel-selector/" target="_blank" rel="noopener">Designing Interfaces</a><a href="http://designinginterfaces.com/patterns/two-panel-selector/" target="_blank" rel="noopener">的内容</a>；<br>3，用Scrolling Lists, Archive Lists or List Inlays辅助搜索items ，<a href="https://www.interaction-design.org/literature/article/search-for-items-with-scrolling-lists-archive-lists-or-list-inlays" target="_blank" rel="noopener">对应文章</a>，或者 <em>Designing Interfaces</em> 的<a href="http://designinginterfaces.com/patterns/list-inlay/" target="_blank" rel="noopener">list inlay </a>和<a href="http://designinginterfaces.com/patterns/infinite-list/" target="_blank" rel="noopener"> Infinite list</a>；<br>4，用经典的下拉菜单展示内容，<a href="https://www.interaction-design.org/literature/article/display-contents-the-classic-way-with-dropdown-menus" target="_blank" rel="noopener">对应文章</a>；<br>5，通过tabs对应用户的心智模型，<a href="https://www.interaction-design.org/literature/article/embrace-the-mental-models-of-users-by-implementing-tabs" target="_blank" rel="noopener">对应文章</a>；<br>7，用分页设计模式拆分网站内容，<a href="https://www.interaction-design.org/literature/article/split-the-contents-of-a-website-with-the-pagination-design-pattern" target="_blank" rel="noopener">对应文章</a>。</p>
+<h2 id="导航设计"><a href="#导航设计" class="headerlink" title="导航设计"></a>导航设计</h2><p>1，用全局导航提升网站的可用性，<a href="https://www.interaction-design.org/literature/article/implement-global-navigation-to-improve-website-usability" target="_blank" rel="noopener">对应文章</a>，NN/g也有<a href="https://www.nngroup.com/articles/killing-global-navigation-one-trend-avoid/" target="_blank" rel="noopener">类似文章</a>；<br>2，帮助用户用面包屑retrace回想他们的步骤，<a href="https://www.interaction-design.org/literature/article/help-users-retrace-their-steps-with-breadcrumbs" target="_blank" rel="noopener">对应文章</a>；<br>3，如何运用搜索框提升效率，<a href="https://www.interaction-design.org/literature/article/how-to-apply-search-boxes-to-increase-efficiency" target="_blank" rel="noopener">对应文章</a>；<br>4，用标签云整合必要的关键词会有帮助，<a href="https://www.smashingmagazine.com/2007/11/tag-clouds-gallery-examples-and-good-practices-2/" target="_blank" rel="noopener">对应文章</a>；<br>5，流动导航的设计模式-如何运用inline linking，<a href="https://www.interaction-design.org/literature/article/design-patterns-for-fluid-navigation-how-to-use-inline-linking" target="_blank" rel="noopener">对应文章</a>；<br>7，如何运用页底网站地图保证用户持续走得通，<a href="https://www.interaction-design.org/literature/article/how-to-implement-sitemap-footers-to-keep-users-going" target="_blank" rel="noopener">对应文章</a>；<br>8，导航设计补充：</p>
+<ul>
+<li>引导和结构，<a href="https://vimeo.com/51606577" target="_blank" rel="noopener">对应视频</a>；</li>
+<li>4个黄金法则，<a href="https://vimeo.com/51606578" target="_blank" rel="noopener">对应视频</a>；</li>
+<li>同一个应用、不同的界面，<a href="https://vimeo.com/51606579" target="_blank" rel="noopener">对应视频</a>；</li>
+<li>不同平台的应用之间仍然存在各种不同，<a href="https://vimeo.com/51606576" target="_blank" rel="noopener">对应视频</a>；<h2 id="简化数据输入"><a href="#简化数据输入" class="headerlink" title="简化数据输入"></a>简化数据输入</h2>1，先做下让你想法flowing的热身练习，<a href="https://www.inc.com/ayse-birsel/want-your-team-to-be-more-creative-start-with-this-3-minute-exercise.html" target="_blank" rel="noopener">对应文章</a>；<br>2，如何通过自动补全为你的用户简化数据录入，<a href="https://www.codeproject.com/Articles/17172/Simplify-Data-Entry-user-experience-with-AutoCompl" target="_blank" rel="noopener">对应文章</a>；<br>3，使用可编辑的输入区域为用户提供一定的自由度，<a href="https://www.interaction-design.org/literature/article/giving-your-users-freedom-with-editable-input-fields" target="_blank" rel="noopener">对应文章</a>；<br>4，用精炼的搜索设计模式提高用户的控制杆，<a href="https://www.interaction-design.org/literature/article/increase-the-user-s-sense-of-control-with-the-refined-search-design-pattern" target="_blank" rel="noopener">对应文章</a>；<br>5，如何实施forgiving format调节用户的失误，<a href="https://www.interaction-design.org/literature/article/how-to-implement-a-forgiving-format-to-accommodate-users-mistakes" target="_blank" rel="noopener">对应文章</a>；<br>6，通过添加event calendar加快用户进程，<a href="https://www.interaction-design.org/literature/article/speed-up-the-user-s-process-by-adding-an-event-calendar" target="_blank" rel="noopener">对应文章</a>；<br>7，在输入提示设计模式中利用小线索为用户提供帮助，<a href="https://www.interaction-design.org/literature/article/support-users-with-small-clues-in-the-input-hints-design-pattern" target="_blank" rel="noopener">对应文章</a>；也可以看看NN/g上<a href="https://www.nngroup.com/articles/form-design-placeholders/" target="_blank" rel="noopener">一篇探讨性质的文章</a>。<h2 id="社交属性的作用"><a href="#社交属性的作用" class="headerlink" title="社交属性的作用"></a>社交属性的作用</h2>1，展示成就用来增加网站使用率，<a href="https://www.interaction-design.org/literature/article/display-achievements-to-encourage-website-usage" target="_blank" rel="noopener">对应文章</a>；<br>2，用排行榜提升用户间的对比竞争，<a href="https://www.interaction-design.org/literature/article/increase-competitiveness-in-users-with-leader-boards" target="_blank" rel="noopener">对应文章</a>；<br>3，通过Experimenting with Language提升用户体验，<a href="https://www.uxmatters.com/mt/archives/2008/11/choosing-the-language-for-a-user-interface.php" target="_blank" rel="noopener">参考文章</a>；<br>4，通过实行星级评价建立选项的快速概览，<a href="https://www.interaction-design.org/literature/article/create-a-quick-overview-of-opinions-by-implementing-starred-reviews" target="_blank" rel="noopener">对应文章</a>；<br>5，用导入联系人的设计模式来提升效率，<a href="https://www.interaction-design.org/literature/article/increase-efficiency-with-the-imported-connections-design-pattern" target="_blank" rel="noopener">对应文章</a>；<br>6，使用登录提醒来支持扩展功能，<a href="https://www.interaction-design.org/literature/article/use-sign-in-reminders-to-support-extended-functionalities" target="_blank" rel="noopener">对应文章</a>；<br>7，定期提醒来吸引用户注意力，<a href="https://www.interaction-design.org/literature/article/attract-users-attention-with-update-alerts" target="_blank" rel="noopener">对应文章</a>；<h2 id="腹黑模式"><a href="#腹黑模式" class="headerlink" title="腹黑模式"></a>腹黑模式</h2>交互设计也有用心险恶的一面，<a href="https://darkpatterns.org/types-of-dark-pattern" target="_blank" rel="noopener">一些设计模式</a>可以用来强制、操纵和欺骗用户。</li>
+</ul>
+<p>1，通过腹黑模式强迫、操纵和欺骗用户，<a href="https://www.interaction-design.org/literature/article/the-dark-side-of-ux" target="_blank" rel="noopener">对应文章</a>；<br>2，通过优先展示广告来增加收入，<a href="https://www.interaction-design.org/literature/article/increase-revenues-by-prioritizing-advertisements" target="_blank" rel="noopener">对应文章</a>；<br>3，通过强制注册获取大量用户信息，<a href="https://www.interaction-design.org/literature/article/harvest-users-information-with-forced-registration" target="_blank" rel="noopener">对应文章</a>；<br>4，使用颜色混淆或阻止不需要的操作，<a href="https://www.interaction-design.org/literature/article/using-color-to-confuse-and-to-prevent-unwanted-actions" target="_blank" rel="noopener">对应文章</a>；<br>5，练习：质疑你作为设计师的正直，<a href="https://gomedia.com/zine/insights/graphic-design/thoughts-design-integrity-client/" target="_blank" rel="noopener">对应文章</a>；<br>6，如何在接收和屏蔽的摇摆不定时，获取用户同意，<a href="https://www.interaction-design.org/literature/article/how-to-get-users-agreement-with-the-opt-in-opt-out-dance" target="_blank" rel="noopener">对应文章</a>；<br>7，利用按月收费获取用户的长期承诺，<a href="https://www.interaction-design.org/literature/article/getting-users-long-term-commitment-with-a-monthly-charge" target="_blank" rel="noopener">对应文章</a>；<br>8，把产品偷偷加入用户的购物车，<a href="https://www.interaction-design.org/literature/article/sneaking-products-into-users-shopping-baskets" target="_blank" rel="noopener">对应文章</a>；<br>9，利用默认降低拒绝的可能性，<a href="https://www.interaction-design.org/literature/article/reduce-the-likelihood-of-rejection-with-implied-consent" target="_blank" rel="noopener">对应文章</a>；</p>
+<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><p>基本上是练习分析Youtube、Facebook、Wikipedia、<a href="https://ebay.gitbook.io/mindpatterns/" target="_blank" rel="noopener">Ebay</a>和Twitter的设计模式；还有<a href="https://www.youtube.com/watch?v=WTYet-qf1jo" target="_blank" rel="noopener">Windows8的动效评估</a>；</p>
+<p>可以扩展去看各基础平台的设计模式，<br>如微软Windows、SAP、<a href="https://docs.oracle.com/cd/E65859_01/fluid_ux/index.html" target="_blank" rel="noopener">Oracle</a>、MacOS、iOS、Android，甚至一些汽车类工业产品的设计模式。</p>
+<p>一些平台也收集了相关设计模式，比如<a href="http://www.welie.com/patterns/" target="_blank" rel="noopener">Welie</a>、<a href="https://pttrns.com" target="_blank" rel="noopener">Pttrns</a>和<a href="http://ui-patterns.com" target="_blank" rel="noopener">UI Patterns</a>。</p>
+<h1 id="三，认知与知觉"><a href="#三，认知与知觉" class="headerlink" title="三，认知与知觉"></a>三，认知与知觉</h1><p>又交给Alan Dix了。<br>1，人类的知觉和认知，<a href="https://vimeo.com/51610029" target="_blank" rel="noopener">对应视频</a>；<br>2，五种感官和其他，<a href="https://vimeo.com/51610030" target="_blank" rel="noopener">对应视频</a>；<br>3，眼睛和视野 ，<a href="https://vimeo.com/51610032" target="_blank" rel="noopener">对应视频</a>；<br>4，耳朵和声音，<a href="https://vimeo.com/52546218" target="_blank" rel="noopener">Part 1</a>和<a href="https://vimeo.com/52546375" target="_blank" rel="noopener">Part 2</a>；<br>5，activity：视错觉-产生什么影响，<a href="https://vimeo.com/55947937" target="_blank" rel="noopener">对应视频</a>；<br>6，总结：视觉和听觉，<a href="https://vimeo.com/52990931" target="_blank" rel="noopener">对应视频</a>；<br>7，选择性注意力测试，<a href="https://www.habitsforwellbeing.com/selective-attention-test-test-your-awareness/" target="_blank" rel="noopener">对应文章</a>；<br>8，人机噩梦：混乱的按钮、人类犯错和医疗保健，<a href="https://www.youtube.com/watch?v=ifjDWKMNlIk" target="_blank" rel="noopener">对应视频</a>。</p>
+<h1 id="四，记忆"><a href="#四，记忆" class="headerlink" title="四，记忆"></a>四，记忆</h1><p>1，记忆的<a href="https://vimeo.com/52941068" target="_blank" rel="noopener">类型</a>、<a href="https://vimeo.com/52941070" target="_blank" rel="noopener">短期记忆</a>、<a href="https://vimeo.com/52941071" target="_blank" rel="noopener">长期记忆</a>、<a href="https://vimeo.com/52941075" target="_blank" rel="noopener">Mezzanine记忆</a>和<a href="https://vimeo.com/52941077" target="_blank" rel="noopener">Reliable记忆</a>；<br>2，练习，利用记忆 ，<a href="https://vimeo.com/55947939" target="_blank" rel="noopener">对应视频</a>；<br>3，activity：记忆和教育-政治家做对了吗？ <a href="https://vimeo.com/55947940" target="_blank" rel="noopener">对应视频</a>；<br>4，总结：记忆，<a href="https://vimeo.com/52990929" target="_blank" rel="noopener">对应视频</a>；</p>
+<h1 id="五，想法和行动"><a href="#五，想法和行动" class="headerlink" title="五，想法和行动"></a>五，想法和行动</h1><p>继续看Alan的视频<br>1，想法，<a href="https://vimeo.com/52990930" target="_blank" rel="noopener">对应视频</a>；<br>2，练习：Wason-Does it work？<a href="https://vimeo.com/55948715" target="_blank" rel="noopener">对应视频</a>；<br>3，进入行动，进入世界；行动让你了解世界，<a href="https://vimeo.com/52990928" target="_blank" rel="noopener">对应视频</a>；<br>4，活动：菲兹定律小实验，<a href="https://vimeo.com/55948716" target="_blank" rel="noopener">对应视频</a>；</p>
+<h1 id="六，情感和体验"><a href="#六，情感和体验" class="headerlink" title="六，情感和体验"></a>六，情感和体验</h1><p>仍然是Alan的视频，分为四个部分，</p>
+<p>第1部分，<br>1，情感和体验-介绍，<a href="https://vimeo.com/52470606" target="_blank" rel="noopener">对应视频</a>；<br>2，why now，<a href="https://vimeo.com/52478452" target="_blank" rel="noopener">对应视频</a>；<br>3，系统内的情感，<a href="https://vimeo.com/52478453" target="_blank" rel="noopener">对应视频</a>；<br>4，情感和体验-应用区域，<a href="https://vimeo.com/52479487" target="_blank" rel="noopener">Part 1 </a>和<a href="https://vimeo.com/52482027" target="_blank" rel="noopener">Part 2</a>；</p>
+<p>第2部分，<br>1，情感理论-情感的分类，reason and emotion，<a href="https://vimeo.com/52545614" target="_blank" rel="noopener">对应视频</a>；<br>2，情感理论-the happy mean，体验和魅力，<a href="https://vimeo.com/52545611" target="_blank" rel="noopener">对应视频</a>；<br>3，练习：理论有帮助吗？，<a href="https://vimeo.com/52545615" target="_blank" rel="noopener">对应视频</a>；</p>
+<p>第3部分，<br>1，设计体验-Crackers美好应用的案例研究，<a href="https://vimeo.com/52545620" target="_blank" rel="noopener">对应视频</a>；<br>2，设计体验-练习，<a href="https://vimeo.com/52545617" target="_blank" rel="noopener">对应视频</a>；<br>3，为Peak Experience设计，<a href="https://vimeo.com/52545801" target="_blank" rel="noopener">对应视频</a>；<br>4，为Peak Experience设计-练习，<a href="https://vimeo.com/52545966" target="_blank" rel="noopener">对应视频</a>；<br>5，扩展情景体验-介绍，<a href="https://vimeo.com/52546026" target="_blank" rel="noopener">对应视频</a>；<br>6，扩展情景体验-练习，<a href="https://vimeo.com/52546024" target="_blank" rel="noopener">对应视频</a>；<br>7，扩展情景体验-理论，<a href="https://vimeo.com/52546023" target="_blank" rel="noopener">对应视频</a>；<br>8，扩展情景体验-理论练习，<a href="https://vimeo.com/52546025" target="_blank" rel="noopener">对应视频</a>；</p>
+<p>第4部分，我没有get到明确点的部分：<br>1，The Drift Table，<a href="https://www.youtube.com/watch?v=uRKOypmDDBM" target="_blank" rel="noopener">对应视频</a>；<br>2，1976年Kursaal Flyers的歌：<em>Little does she know</em> ，歌词里面包括：</p>
+<blockquote>
+<p>Little does she know that I know that she knows<br>That I know she’s two-timin’ me<br>Little does she know that I know that she knows<br>That I know she’s cheatin’ on me</p>
+</blockquote>
+<h1 id="七，实施"><a href="#七，实施" class="headerlink" title="七，实施"></a>七，实施</h1><p>1，实施所需的帮助，<a href="https://vimeo.com/51591336" target="_blank" rel="noopener">对应视频</a>；</p>
+<p>Windows System<br>2，界面和资源管理，<a href="https://vimeo.com/51592287" target="_blank" rel="noopener">对应视频</a>；<br>3，管理和架构，<a href="https://vimeo.com/51593335" target="_blank" rel="noopener">对应视频</a>；</p>
+<p>Programming<br>4，工具包，<a href="https://vimeo.com/51593336" target="_blank" rel="noopener">对应视频</a>；<br>5，paint models，<a href="https://vimeo.com/51593343" target="_blank" rel="noopener">对应视频</a>；<br>6，event models，<a href="https://vimeo.com/51593344" target="_blank" rel="noopener">对应视频</a>；<br>7，练习：review代码，<a href="https://vimeo.com/56092901" target="_blank" rel="noopener">对应视频</a>；<br>8，软件架构和通用框架，<a href="https://vimeo.com/51593345" target="_blank" rel="noopener">对应视频</a>；<br>9，练习：MVC在核心控制区域，<a href="https://vimeo.com/56094317" target="_blank" rel="noopener">对应视频</a>，<a href="http://www.hcibook.com/e3/scenario/nuclear" target="_blank" rel="noopener">其中所用案例</a>；<br>10，练习：Seeheim Scenario，<a href="https://vimeo.com/56094318" target="_blank" rel="noopener">对应视频</a>，<a href="http://www.hcibook.com/e3/scenario/nuclear2" target="_blank" rel="noopener">其中所用案例</a>；<br>11，activity：学习编程UI，<a href="https://vimeo.com/56094319" target="_blank" rel="noopener">对应视频</a>；</p>
+<h1 id="八，评估"><a href="#八，评估" class="headerlink" title="八，评估"></a>八，评估</h1><p>让我们跟着Dix老师进行完本章节的最后一课吧。</p>
+<p>1，评估的类型，<a href="https://vimeo.com/52916707" target="_blank" rel="noopener">对应视频</a>；<br>2，研究和实验，<a href="https://vimeo.com/52916708" target="_blank" rel="noopener">对应视频</a>；<br>3，练习：移动APP评估，<a href="https://vimeo.com/56096353" target="_blank" rel="noopener">对应视频</a>；<br>4，数字和统计，<a href="https://vimeo.com/52916709" target="_blank" rel="noopener">对应视频</a>；<br>5，练习：Fitts’ Number Crunching，<a href="https://vimeo.com/56099570" target="_blank" rel="noopener">对应视频</a>；<br>6，从数据获得的知识，<a href="https://vimeo.com/52916711" target="_blank" rel="noopener">对应视频</a>；<br>7，练习：分析和解释Wason卡片测试数据，<a href="https://vimeo.com/56105029" target="_blank" rel="noopener">对应视频</a>；<br>8，从评估到验证，<a href="https://vimeo.com/52916712" target="_blank" rel="noopener">对应视频</a>；</p>
+<h1 id="延伸"><a href="#延伸" class="headerlink" title="延伸"></a>延伸</h1><p>ACM SIGCHI有个<a href="http://hcibib.org" target="_blank" rel="noopener">HCI bibliography</a>提供了相关参考信息的收集和汇总。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Once
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://whuxai.com/2019/08/27/B3-人机交互设计/" title="B3-人机交互设计">https://whuxai.com/2019/08/27/B3-人机交互设计/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/UX/" rel="tag"># UX</a>
+          
+            <a href="/tags/HCI/" rel="tag"># HCI</a>
+          
+            <a href="/tags/Interactions/" rel="tag"># Interactions</a>
+          
+            <a href="/tags/交互设计/" rel="tag"># 交互设计</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/26/B2-可用性/" rel="next" title="B2-可用性">
+                <i class="fa fa-chevron-left"></i> B2-可用性
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/28/B4-移动端UX/" rel="prev" title="B4-移动端UX">
+                B4-移动端UX <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Once">
+          <p class="site-author-name" itemprop="name">Once</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/dN72lUjiTPcyEkZN/" title="UX大会" target="_blank">UX大会</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/i6xzBXPMDZwQ663r/" title="UX狮群" target="_blank">UX狮群</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/wvEWwNm5ZXMFEkst/" title="UX书单" target="_blank">UX书单</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/mcnJah3QMhoDuglJ/" title="UX课程" target="_blank">UX课程</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一，基础知识点"><span class="nav-number">1.</span> <span class="nav-text">一，基础知识点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二，UI设计样式"><span class="nav-number">2.</span> <span class="nav-text">二，UI设计样式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#页面结构"><span class="nav-number">2.1.</span> <span class="nav-text">页面结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容组织"><span class="nav-number">2.2.</span> <span class="nav-text">内容组织</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导航设计"><span class="nav-number">2.3.</span> <span class="nav-text">导航设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简化数据输入"><span class="nav-number">2.4.</span> <span class="nav-text">简化数据输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#社交属性的作用"><span class="nav-number">2.5.</span> <span class="nav-text">社交属性的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#腹黑模式"><span class="nav-number">2.6.</span> <span class="nav-text">腹黑模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计模式"><span class="nav-number">2.7.</span> <span class="nav-text">设计模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三，认知与知觉"><span class="nav-number">3.</span> <span class="nav-text">三，认知与知觉</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四，记忆"><span class="nav-number">4.</span> <span class="nav-text">四，记忆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五，想法和行动"><span class="nav-number">5.</span> <span class="nav-text">五，想法和行动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六，情感和体验"><span class="nav-number">6.</span> <span class="nav-text">六，情感和体验</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七，实施"><span class="nav-number">7.</span> <span class="nav-text">七，实施</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八，评估"><span class="nav-number">8.</span> <span class="nav-text">八，评估</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#延伸"><span class="nav-number">9.</span> <span class="nav-text">延伸</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Once</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

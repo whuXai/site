@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="UX,用户研究,ROI,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="珈山体工队" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="你准备怎样去设计一款人们会接受和喜欢的产品，当你不了解他们需要什么的时候？作为设计师，应该尽力去了解你的客户，从外到内的建立知识库。用户研究就是专门做这件事情的，也是因此被认为是用户体验设计最重要的部分。通过从用户研究的实践中学习，积累经验技巧，你会得到有关用户的一手信息，设计对用户更有帮助的更好的产品。本章节了解用户研究的方法和策略，知道分析用研结果的方法，让用研的结果可以有效推进设计，以及如何">
+<meta name="keywords" content="UX,用户研究,ROI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B1-用户研究">
+<meta property="og:url" content="https://whuxai.com/2019/08/25/B1-用户研究/index.html">
+<meta property="og:site_name" content="珈山体工队">
+<meta property="og:description" content="你准备怎样去设计一款人们会接受和喜欢的产品，当你不了解他们需要什么的时候？作为设计师，应该尽力去了解你的客户，从外到内的建立知识库。用户研究就是专门做这件事情的，也是因此被认为是用户体验设计最重要的部分。通过从用户研究的实践中学习，积累经验技巧，你会得到有关用户的一手信息，设计对用户更有帮助的更好的产品。本章节了解用户研究的方法和策略，知道分析用研结果的方法，让用研的结果可以有效推进设计，以及如何">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-04T11:01:47.829Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B1-用户研究">
+<meta name="twitter:description" content="你准备怎样去设计一款人们会接受和喜欢的产品，当你不了解他们需要什么的时候？作为设计师，应该尽力去了解你的客户，从外到内的建立知识库。用户研究就是专门做这件事情的，也是因此被认为是用户体验设计最重要的部分。通过从用户研究的实践中学习，积累经验技巧，你会得到有关用户的一手信息，设计对用户更有帮助的更好的产品。本章节了解用户研究的方法和策略，知道分析用研结果的方法，让用研的结果可以有效推进设计，以及如何">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://whuxai.com/2019/08/25/B1-用户研究/">
+
+
+
+
+
+  <title>B1-用户研究 | 珈山体工队</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">珈山体工队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://whuxai.com/2019/08/25/B1-用户研究/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Once">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="珈山体工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">B1-用户研究</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-25T21:00:00+08:00">
+                2019-08-25
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-04T19:01:47+08:00">
+                2019-09-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/UX-学习课程/" itemprop="url" rel="index">
+                    <span itemprop="name">UX 学习课程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>你准备怎样去设计一款人们会接受和喜欢的产品，当你不了解他们需要什么的时候？作为设计师，应该尽力去了解你的客户，从外到内的建立知识库。用户研究就是专门做这件事情的，也是因此被认为是用户体验设计最重要的部分。通过从用户研究的实践中学习，积累经验技巧，你会得到有关用户的一手信息，设计对用户更有帮助的更好的产品。<br>本章节了解用户研究的方法和策略，知道分析用研结果的方法，让用研的结果可以有效推进设计，以及如何通过Workshops介绍用户画像、客户旅程地图，同客户、用户沟通。</p>
+<a id="more"></a>
+
+<h1 id="一，基础知识"><a href="#一，基础知识" class="headerlink" title="一，基础知识"></a>一，基础知识</h1><p>第一部分：<br>1，用户研究的what和why，<a href="https://www.interaction-design.org/literature/article/user-research-what-it-is-and-why-you-should-do-it" target="_blank" rel="noopener">对应文章</a>；<br>2，用户研究的ROI，这也是why的延伸，可以<a href="https://cellosignal.com/blog/the-roi-of-ux-research" target="_blank" rel="noopener">看看这篇</a>，<a href="https://www.invisionapp.com/inside-design/user-research-transform-company/" target="_blank" rel="noopener">或者这篇</a>，也可以看<a href="https://info.usertesting.com/proving-roi-on-ux-research_whitepaper_Registration.html" target="_blank" rel="noopener">UserTesting的白皮书</a>。<br>3，用户研究的时机和方法选择，<a href="https://www.nngroup.com/articles/which-ux-research-methods/" target="_blank" rel="noopener">对应文章</a>；也可以多看两篇：比如<a href="https://occupytheory.org/advantages-and-disadvantages-of-qualitative-research/" target="_blank" rel="noopener">定性研究的利弊</a>；比如NN/g的<a href="https://www.nngroup.com/articles/quantitative-user-research-methods/" target="_blank" rel="noopener">定量研究方法</a>和<a href="https://www.nngroup.com/articles/risks-of-quantitative-studies/" target="_blank" rel="noopener">风险</a>，也有<a href="https://www.youtube.com/watch?v=UywO2XuFuBA" target="_blank" rel="noopener">相关视频可看</a>。<br>4，把利益相关方引入到用户研究中，<a href="https://www.interaction-design.org/literature/article/how-to-involve-stakeholders-in-your-user-research" target="_blank" rel="noopener">对应文章</a>，或者<a href="https://www.uxmatters.com/mt/archives/2015/04/how-and-when-to-involve-stakeholders.php" target="_blank" rel="noopener">UXmatters的文章</a>，或者<a href="https://www.smashingmagazine.com/2018/05/fast-ux-research/" target="_blank" rel="noopener">SmashingMagazine的文章</a>。</p>
+<p>现在就可以<a href="https://www.youtube.com/watch?v=oeSsyb-tzfo" target="_blank" rel="noopener">看个101的视频</a>，如果没时间看以下内容的话。</p>
+<p>第二部分：<br>1，用户研究该如何计划，这类文章很多，<a href="https://www.nngroup.com/articles/pm-research-plan/" target="_blank" rel="noopener">NN/g的这篇</a>比较全面，IDF只用<a href="https://www.interaction-design.org/literature/article/a-one-page-user-research-plan" target="_blank" rel="noopener">一张纸的计划</a>，还有像<a href="https://www.userzoom.com/blog/how-to-create-a-ux-research-plan/" target="_blank" rel="noopener">UserZOOM</a>、<a href="https://www.usertesting.com/blog/crafting-user-research-plan/" target="_blank" rel="noopener">UserTesting</a>和<a href="https://www.smashingmagazine.com/2012/01/ux-research-plan-stakeholders-love/" target="_blank" rel="noopener">SmashingMagazine</a>都有相关文章。<br>甚至你都可以<a href="https://blog.aureliuslab.com/peter-morville-interview-on-ux-user-research-and-design-planning" target="_blank" rel="noopener">听听PeterMorville怎么说</a>。</p>
+<p>2，用户研究前有什么注意事项，IDF也有两篇相关文章：<a href="https://www.interaction-design.org/literature/article/best-practices-for-qualitative-user-research" target="_blank" rel="noopener">【1】</a>和<a href="https://www.interaction-design.org/literature/article/conducting-ethical-user-research" target="_blank" rel="noopener">【2】</a>。</p>
+<p>我用LAT的结构，概括整理下面的三节课，即Look-Ask-Test。</p>
+<h1 id="二，Look观察用户"><a href="#二，Look观察用户" class="headerlink" title="二，Look观察用户"></a>二，Look观察用户</h1><p>如何观察和观察什么，有很多相关的文章，比如<a href="https://www.interaction-design.org/literature/article/how-to-conduct-user-observations" target="_blank" rel="noopener">IDF的对应文章</a>，或者<a href="https://www.nngroup.com/articles/observer-guidelines/" target="_blank" rel="noopener">NN/g的文章</a>，或者<a href="https://uxmastery.com/how-to-write-effective-research-observations/" target="_blank" rel="noopener">UX Mastery的文章</a>。</p>
+<p>还有一种是Contextual Inquiry，即到用户的实际工作场景中观察和调研。这种方法相比把用户请到公司来做研究，经常会发现新的研究点。<br>相应的文章也很多：<a href="https://www.interaction-design.org/literature/article/contextual-interviews-and-how-to-handle-them" target="_blank" rel="noopener">IDF的介绍</a>，<a href="https://www.uxmatters.com/mt/archives/2012/06/why-are-contextual-inquiries-so-difficult.php" target="_blank" rel="noopener">UXmatters的文章</a>，<a href="https://www.usabilitybok.org/contextual-inquiry" target="_blank" rel="noopener">Usability的wiki</a>，<a href="https://uxmastery.com/conducting-contextual-enquiry-or-site-visits/" target="_blank" rel="noopener">UX Mastery的文章</a>和<a href="https://lsntap.org/blogs/tips-planning-conducting-and-reviewing-contextual-inquiries" target="_blank" rel="noopener">一些tips</a>，<a href="https://blog.practicalservicedesign.com/running-contextual-design-research-for-service-strategy-b3c08dffb135" target="_blank" rel="noopener">服务设计也有相关文章</a>。</p>
+<h1 id="三，Ask用户访谈"><a href="#三，Ask用户访谈" class="headerlink" title="三，Ask用户访谈"></a>三，Ask用户访谈</h1><p>我们每天都在谈论各种问题，有关访谈的文章更是多如牛毛。<br>IDF讲解的用户访谈章节，应该是基于 <em>Qualitative HCI Research</em> 的作者Ann Blandford博士的相关访谈和文章。比如<a href="https://www.interaction-design.org/literature/article/how-to-conduct-user-interviews" target="_blank" rel="noopener">如何进行</a>，<a href="https://www.interaction-design.org/literature/article/pros-and-cons-of-conducting-user-interviews" target="_blank" rel="noopener">相关利弊</a>，<a href="https://www.interaction-design.org/literature/article/how-to-prepare-for-a-user-interview-and-ask-the-right-questions" target="_blank" rel="noopener">如何准备问题</a>，<a href="https://www.interaction-design.org/literature/article/how-to-moderate-user-interviews" target="_blank" rel="noopener">过程如何掌控</a>和后续的<a href="https://www.interaction-design.org/literature/article/how-to-do-a-thematic-analysis-of-user-interviews" target="_blank" rel="noopener">分析处理</a>。</p>
+<p>当然焦点小组也是一种引导用户讨论他们的理解、使用和想法的方式，IDF也有<a href="https://www.interaction-design.org/literature/article/how-to-conduct-focus-groups" target="_blank" rel="noopener">相关文章</a>。<br>问卷调查也是变向的用户访谈，<a href="https://www.nngroup.com/articles/qualitative-surveys/" target="_blank" rel="noopener">NN/g提供了一些tips</a>。</p>
+<h1 id="四，Test可用性测试"><a href="#四，Test可用性测试" class="headerlink" title="四，Test可用性测试"></a>四，Test可用性测试</h1><p>眼见不一定为实，耳听也未必为真，最后还是要围绕可用性做下测试。<br>IDF上提供了两篇文章告诉你<a href="https://www.interaction-design.org/literature/article/the-basics-of-recruiting-users-for-usability-testing" target="_blank" rel="noopener">招募用户的基础</a>和<a href="https://www.interaction-design.org/literature/article/how-to-recruit-users-for-usability-studies" target="_blank" rel="noopener">如何招募用户</a>。</p>
+<p>不如看NN/g的<a href="https://www.nngroup.com/articles/usability-test-checklist/" target="_blank" rel="noopener">可用性测试checklist</a>，或者<a href="https://www.alexandercowan.com/usability-test-plan/" target="_blank" rel="noopener">Cowan的文章</a>，或者<a href="https://measuringu.com/usability-test-plan/" target="_blank" rel="noopener">MeasuringU的计划</a>，或者<a href="https://www.usability.gov/how-to-and-tools/methods/running-usability-tests.html" target="_blank" rel="noopener">usability的How-To</a>。<br>NN/g也建议做可用性测试的时候考虑<a href="https://www.nngroup.com/articles/task-scenarios-usability-testing/" target="_blank" rel="noopener">用户场景</a>，IDF也有文章提到了<a href="https://www.interaction-design.org/literature/article/design-scenarios-communicating-the-small-steps-in-the-user-experience" target="_blank" rel="noopener">场景设计</a>。</p>
+<p>测试之后的Report该怎么写，可以看<a href="https://www.nngroup.com/articles/actionable-usability-findings/" target="_blank" rel="noopener">NN/g的文章</a>或者<a href="https://www.uxmatters.com/mt/archives/2012/02/communicating-user-research-findings.php" target="_blank" rel="noopener">UXmatters的文章</a>。</p>
+<h1 id="五，用户研究成果"><a href="#五，用户研究成果" class="headerlink" title="五，用户研究成果"></a>五，用户研究成果</h1><p>文字版的用户研究报告可能不是一个理想的研究成果，视觉化处理也许能够产生更大的影响。</p>
+<p><a href="https://www.interaction-design.org/literature/article/how-to-visualize-your-qualitative-user-research-results-for-maximum-impact" target="_blank" rel="noopener">IDF的文章</a>介绍了亲和图、移情图和用户体验地图。</p>
+<p><a href="https://www.cooper.com/journal/2008/05/the_origin_of_personas" target="_blank" rel="noopener">Cooper提出的用户画像</a>也许是最常用的和最有效的研究结果。<br>IDF有篇<a href="https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/personas" target="_blank" rel="noopener">长文介绍</a>，也有两个短篇说明<a href="https://www.interaction-design.org/literature/article/creating-personas-from-user-research-results" target="_blank" rel="noopener">包含的元素</a>和<a href="https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them" target="_blank" rel="noopener">创建步骤</a>。<br>这里也少不了<a href="https://www.nngroup.com/articles/persona/" target="_blank" rel="noopener">NN/g的文章</a>和<a href="https://measuringu.com/scientific-personas/" target="_blank" rel="noopener">MeasuringU的观点</a>。<br>附一个案例：<a href="https://www.behance.net/gallery/14975537/Disney-Movies-Anywhere-App-Personas" target="_blank" rel="noopener">Disney Movies Anywhere的画像</a>，更多的<a href="https://venngage.com/blog/user-persona-examples/" target="_blank" rel="noopener">20个案例</a>和<a href="https://uxplanet.org/18-free-excellent-user-persona-templates-you-cant-miss-out-b25c9b38290e" target="_blank" rel="noopener">18个模版</a>。</p>
+<p>通过视觉化处理后，<a href="https://www.interaction-design.org/literature/article/workshops-to-establish-empathy-and-understanding-from-user-research-results" target="_blank" rel="noopener">建立workshop</a>，和团队分享、沟通研究结果，寻找解决方案。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Once
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://whuxai.com/2019/08/25/B1-用户研究/" title="B1-用户研究">https://whuxai.com/2019/08/25/B1-用户研究/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/UX/" rel="tag"># UX</a>
+          
+            <a href="/tags/用户研究/" rel="tag"># 用户研究</a>
+          
+            <a href="/tags/ROI/" rel="tag"># ROI</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/24/A4-Accessibility无障碍设计/" rel="next" title="A4-Accessibility无障碍设计">
+                <i class="fa fa-chevron-left"></i> A4-Accessibility无障碍设计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/26/B2-可用性/" rel="prev" title="B2-可用性">
+                B2-可用性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Once">
+          <p class="site-author-name" itemprop="name">Once</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/dN72lUjiTPcyEkZN/" title="UX大会" target="_blank">UX大会</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/i6xzBXPMDZwQ663r/" title="UX狮群" target="_blank">UX狮群</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/wvEWwNm5ZXMFEkst/" title="UX书单" target="_blank">UX书单</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/mcnJah3QMhoDuglJ/" title="UX课程" target="_blank">UX课程</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一，基础知识"><span class="nav-number">1.</span> <span class="nav-text">一，基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二，Look观察用户"><span class="nav-number">2.</span> <span class="nav-text">二，Look观察用户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三，Ask用户访谈"><span class="nav-number">3.</span> <span class="nav-text">三，Ask用户访谈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四，Test可用性测试"><span class="nav-number">4.</span> <span class="nav-text">四，Test可用性测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五，用户研究成果"><span class="nav-number">5.</span> <span class="nav-text">五，用户研究成果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Once</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

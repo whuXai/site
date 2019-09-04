@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="UX,Design Thinking,设计思维,迭代流程,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="珈山体工队" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="设计思维在业界如苹果、谷歌有实践，在学界如斯坦福、MIT也有研究，是一个以人为本，原型驱动，设计创新的流程，设计思维的方法和策略会应用在设计流程里的每个阶段。设计师和设计师的工作流程可以帮我们系统性的提炼、传播、学习和应用这些以人为本的技术，在解决设计、商业、民生问题的时候找到创新之路。本章节会介绍设计思维的构成和方法，面对问题，如何应用设计思维，获得创新的以用户为中心的解决方案；在问题的每个阶段">
+<meta name="keywords" content="UX,Design Thinking,设计思维,迭代流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A2-设计思维">
+<meta property="og:url" content="https://whuxai.com/2019/08/22/A2-设计思维/index.html">
+<meta property="og:site_name" content="珈山体工队">
+<meta property="og:description" content="设计思维在业界如苹果、谷歌有实践，在学界如斯坦福、MIT也有研究，是一个以人为本，原型驱动，设计创新的流程，设计思维的方法和策略会应用在设计流程里的每个阶段。设计师和设计师的工作流程可以帮我们系统性的提炼、传播、学习和应用这些以人为本的技术，在解决设计、商业、民生问题的时候找到创新之路。本章节会介绍设计思维的构成和方法，面对问题，如何应用设计思维，获得创新的以用户为中心的解决方案；在问题的每个阶段">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-04T11:01:02.943Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A2-设计思维">
+<meta name="twitter:description" content="设计思维在业界如苹果、谷歌有实践，在学界如斯坦福、MIT也有研究，是一个以人为本，原型驱动，设计创新的流程，设计思维的方法和策略会应用在设计流程里的每个阶段。设计师和设计师的工作流程可以帮我们系统性的提炼、传播、学习和应用这些以人为本的技术，在解决设计、商业、民生问题的时候找到创新之路。本章节会介绍设计思维的构成和方法，面对问题，如何应用设计思维，获得创新的以用户为中心的解决方案；在问题的每个阶段">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://whuxai.com/2019/08/22/A2-设计思维/">
+
+
+
+
+
+  <title>A2-设计思维 | 珈山体工队</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">珈山体工队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://whuxai.com/2019/08/22/A2-设计思维/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Once">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="珈山体工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">A2-设计思维</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-22T21:00:00+08:00">
+                2019-08-22
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-04T19:01:02+08:00">
+                2019-09-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/UX-学习课程/" itemprop="url" rel="index">
+                    <span itemprop="name">UX 学习课程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>设计思维在业界如苹果、谷歌有实践，在学界如斯坦福、MIT也有研究，是一个以人为本，原型驱动，设计创新的流程，设计思维的方法和策略会应用在设计流程里的每个阶段。设计师和设计师的工作流程可以帮我们系统性的提炼、传播、学习和应用这些以人为本的技术，在解决设计、商业、民生问题的时候找到创新之路。<br>本章节会介绍设计思维的构成和方法，面对问题，如何应用设计思维，获得创新的以用户为中心的解决方案；在问题的每个阶段，如何运用有效的设计思维方案模版。</p>
+<a id="more"></a>
+
+<h1 id="一，设计思维定义"><a href="#一，设计思维定义" class="headerlink" title="一，设计思维定义"></a>一，设计思维定义</h1><p>我们先简单介绍下设计思维：<br>从1969年Herbert Simon提出design thinking以后，发展出来各种各样的理论和方法，即使在体验设计领域也有很多，比如：<a href="https://experience.sap.com/skillup/introduction-to-design-thinking/" target="_blank" rel="noopener">SAP的</a>，<a href="https://www.ideou.com/pages/design-thinking" target="_blank" rel="noopener">IDEO的</a>和<a href="https://www.nngroup.com/articles/design-thinking/" target="_blank" rel="noopener">NN/g的</a>。</p>
+<p>诺曼和Bill Moggridge对此也有过探讨：<a href="https://www.core77.com/posts/16790/design-thinking-a-useful-myth-16790" target="_blank" rel="noopener">design thinking a useful myth</a>，<a href="https://www.core77.com/posts/17042/design-thinking-dear-don-17042" target="_blank" rel="noopener">Moggridge的看法</a>和<a href="https://www.core77.com/posts/24579/rethinking-design-thinking-24579" target="_blank" rel="noopener">诺曼的反思</a>。</p>
+<p>IDF有文章做了<a href="https://www.interaction-design.org/literature/article/design-thinking-a-quick-overview" target="_blank" rel="noopener">总结概括</a>；也有文章做了<a href="https://www.interaction-design.org/literature/article/what-is-design-thinking-and-why-is-it-so-popular" target="_blank" rel="noopener">进一步解释，以及说明为什么会如此流行</a>。</p>
+<h1 id="二，设计思维实践"><a href="#二，设计思维实践" class="headerlink" title="二，设计思维实践"></a>二，设计思维实践</h1><p>这节课主要是基于d.school的设计思维实践的5个步骤来讲解，可以看IDF对应的文章：<br><a href="https://www.interaction-design.org/literature/article/5-stages-in-the-design-thinking-process" target="_blank" rel="noopener">步骤概览</a>；<br>1，<a href="https://www.interaction-design.org/literature/article/stage-1-in-the-design-thinking-process-empathise-with-your-users" target="_blank" rel="noopener">empathise</a>；<br>2，<a href="https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-by-synthesising-information" target="_blank" rel="noopener">define by synthesising information</a>；<a href="https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-and-interpret-the-results" target="_blank" rel="noopener">define and interpret the results</a>；<br>3，<a href="https://www.interaction-design.org/literature/article/stage-3-in-the-design-thinking-process-ideate" target="_blank" rel="noopener">ideate</a>；<br>4，<a href="https://www.interaction-design.org/literature/article/stage-4-in-the-design-thinking-process-prototype" target="_blank" rel="noopener">prototype</a>；<br>5，<a href="https://www.interaction-design.org/literature/article/stage-5-in-the-design-thinking-process-test" target="_blank" rel="noopener">test</a>。</p>
+<p>还有<a href="https://www.interaction-design.org/literature/article/design-thinking-select-the-right-team-members-and-start-facilitating" target="_blank" rel="noopener">如何选择合适的团队成员</a>。</p>
+<p>那进一步的实践就是：</p>
+<ul>
+<li>针对新问题找到新的思考方式，<a href="https://www.interaction-design.org/literature/article/design-thinking-new-innovative-thinking-for-new-problems" target="_blank" rel="noopener">对应文章</a>；</li>
+<li>解决问题时会遇到的障碍和设计思维的创新之处，<a href="https://www.interaction-design.org/literature/article/obstacles-to-problem-solving-and-innovation-in-design-thinking" target="_blank" rel="noopener">对应文章</a>；</li>
+<li>Wicked问题：结合系统思维和敏捷方法，5步帮你解决，<a href="https://www.interaction-design.org/literature/article/wicked-problems-5-steps-to-help-you-tackle-wicked-problems-by-combining-systems-thinking-with-agile-methodology" target="_blank" rel="noopener">对应文章</a>；</li>
+</ul>
+<p>之后，可以了解更多基础的设计思维视频和方法，<a href="https://www.interaction-design.org/literature/article/essential-design-thinking-videos-and-methods" target="_blank" rel="noopener">对应文章</a>。</p>
+<h1 id="三，Empathise你的目标用户"><a href="#三，Empathise你的目标用户" class="headerlink" title="三，Empathise你的目标用户"></a>三，Empathise你的目标用户</h1><p>1，empathy的力量，可以通过<a href="https://www.youtube.com/watch?v=1Evwgu369Jw" target="_blank" rel="noopener">视频形象了解下</a>；<br>2，从同理心开始，<a href="https://www.interaction-design.org/literature/article/design-thinking-getting-started-with-empathy" target="_blank" rel="noopener">对应文章</a>；<br>3，如何开发同理心，<a href="https://www.interaction-design.org/literature/article/how-to-develop-an-empathic-approach-in-design-thinking" target="_blank" rel="noopener">对应文章</a>；<br>4，如何通过开发同理心来提升设计，<a href="https://www.interaction-design.org/literature/article/empathy-how-to-improve-your-designs-by-developing-empathy-for-your-target-group" target="_blank" rel="noopener">对应文章</a>；<br>5，场景映射如何设计，<a href="https://www.interaction-design.org/literature/article/probes-for-context-mapping-how-to-design-and-use-them" target="_blank" rel="noopener">对应文章</a>；<br>6，从人种学研究中获得更好结果的7个简单方法，<a href="https://www.interaction-design.org/literature/article/7-simple-ways-to-get-better-results-from-ethnographic-research" target="_blank" rel="noopener">对应文章</a>；<br>7，如何实施用户访谈，<a href="https://www.interaction-design.org/literature/article/how-to-conduct-user-interviews" target="_blank" rel="noopener">对应文章</a>；<br>8，注意深究问题的根源，<a href="https://www.interaction-design.org/literature/article/question-everything" target="_blank" rel="noopener">对应文章</a>；<br>9，讲故事在建立同理心中的作用，<a href="https://www.interaction-design.org/literature/article/the-power-of-stories-in-building-empathy" target="_blank" rel="noopener">对应文章</a>。</p>
+<h1 id="四，明确设计挑战"><a href="#四，明确设计挑战" class="headerlink" title="四，明确设计挑战"></a>四，明确设计挑战</h1><p>1，通过综合评估已知信息，定位问题，<a href="https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-by-synthesising-information" target="_blank" rel="noopener">对应文章</a>；<br>2，全面解读各方信息和概括研究结果的方法，<a href="https://www.interaction-design.org/literature/article/methods-to-help-you-define-synthesise-and-make-sense-in-your-research" target="_blank" rel="noopener">对应文章</a>；<br>3，使用Affinity Diagrams汇总和分类想法和依据，<a href="https://www.interaction-design.org/literature/article/affinity-diagrams-learn-how-to-cluster-and-bundle-ideas-and-facts" target="_blank" rel="noopener">对应文章</a>；<br>4，使用Empathy Map帮助明确问题，<a href="https://www.interaction-design.org/literature/article/empathy-map-why-and-how-to-use-it" target="_blank" rel="noopener">对应文章</a>；<br>5，使用用户画像，<a href="https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them" target="_blank" rel="noopener">对应文章</a>；<br>6，通过概括观点和询问How Might We来明确挑战，<a href="https://www.interaction-design.org/literature/article/define-and-frame-your-design-challenge-by-creating-your-point-of-view-and-ask-how-might-we" target="_blank" rel="noopener">对应文章</a>；<br>7，描绘利益相关者的关系图，<a href="https://www.interaction-design.org/literature/article/map-the-stakeholders" target="_blank" rel="noopener">对应文章</a>。</p>
+<h1 id="五，构思"><a href="#五，构思" class="headerlink" title="五，构思"></a>五，构思</h1><p>1，如何为构思做准备，<a href="https://www.interaction-design.org/literature/article/what-is-ideation-and-how-to-prepare-for-ideation-sessions" target="_blank" rel="noopener">对应文章</a>；<br>2，创造有效构思的要素和思维模式，<a href="https://www.interaction-design.org/literature/article/understand-the-elements-and-thinking-modes-that-create-fruitful-ideation-sessions" target="_blank" rel="noopener">对应文章</a>；<br>3，创造有效构思的空间环境，<a href="https://www.interaction-design.org/literature/article/create-some-space-for-ideation-sessions-and-design-thinking" target="_blank" rel="noopener">对应文章</a>；<br>4，参考d.school如何创造有效构思的空间环境，<a href="https://dschool.stanford.edu/resources/make-space-excerpts" target="_blank" rel="noopener">链接</a>，有兴趣看看《<a href="https://book.douban.com/subject/6915760/" target="_blank" rel="noopener">Make Space</a>》；</p>
+<p>5，构思<a href="https://www.interaction-design.org/literature/article/introduction-to-the-essential-ideation-techniques-which-are-the-heart-of-design-thinking" target="_blank" rel="noopener">技巧一览</a>，和具体的分析方法：<br><a href="https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-brainstorming-braindumping-brainwriting-and-brainwalking" target="_blank" rel="noopener">Brainstorming, Braindumping, Brainwriting, Brainwalking</a>，<br><a href="https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-scamper" target="_blank" rel="noopener">SCAMPER</a>，<br><a href="https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea" target="_blank" rel="noopener">Worst Possible Idea</a>，<br><a href="https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-challenge-assumptions" target="_blank" rel="noopener">Challenge Assumptions</a>，<br><a href="https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-analogies" target="_blank" rel="noopener">Analogies</a>。</p>
+<p>6，如何描绘设计草稿，<a href="https://www.interaction-design.org/literature/article/etch-a-sketch-how-to-use-sketching-in-user-experience-design" target="_blank" rel="noopener">对应文章</a>；可以多了解下sketch，<a href="https://uxplanet.org/ux-sketching-4deda906c915" target="_blank" rel="noopener">比如这儿</a>，<a href="https://www.invisionapp.com/blog/ux-design-sketching/" target="_blank" rel="noopener">或这儿</a>。</p>
+<p>7，在构思会议的最后如何选择最佳想法，<a href="https://www.interaction-design.org/literature/article/how-to-select-the-best-idea-by-the-end-of-an-ideation-session" target="_blank" rel="noopener">对应文章</a>；<br>8，如何克服构思过程中遇到的14个障碍，<a href="https://www.interaction-design.org/literature/article/14-barriers-to-ideation-and-how-to-overcome-them" target="_blank" rel="noopener">对应文章</a>；</p>
+<p>有关构思的实践，也可以参考<a href="https://uxdesign.cc/how-google-approaches-the-process-of-ideation-f2fc00091f32" target="_blank" rel="noopener">Google的经验分享</a>。</p>
+<h1 id="六，原型和测试"><a href="#六，原型和测试" class="headerlink" title="六，原型和测试"></a>六，原型和测试</h1><p>第一部分，原型设计<br>1，原型设计的好处可以概括为：<br>Prototypes provide the look and feel your audience needs to conceptualize a product’s capabilities.<br>A prototype does not perform like a post- production product and should not be put in normal ware and tare conditions.<br>The prototyping process allows you to test product features, manufacturing methods, and user experiences before full-scale production.<br>The feedback and information you gather from prototype testing is crucial in implementing and launching a successful product.<br>The faster you prototype, the faster you can test, improve, and launch into the market.<br>Rapid prototyping is an opportunity to enhance your project into an intuitive and user- focused product.</p>
+<p>2，从原型设计开始，<a href="https://www.interaction-design.org/literature/article/design-thinking-get-started-with-prototyping" target="_blank" rel="noopener">对应文章</a>；<br>3，如何避免原型设计中6个常见的陷阱，<a href="https://www.interaction-design.org/literature/article/prototyping-in-design-thinking-how-to-avoid-six-common-pitfalls" target="_blank" rel="noopener">对应文章</a>；<br>4，应该创建哪种类型和保真度的原型，<a href="https://www.interaction-design.org/literature/article/what-kind-of-prototype-should-you-create" target="_blank" rel="noopener">对应文章</a>；<br>5，原型设计的8种通用方法和实践，<a href="https://www.interaction-design.org/literature/article/prototyping-learn-eight-common-methods-and-best-practices" target="_blank" rel="noopener">对应文章</a>；<br>6，移动端APP原型的模拟设计，<a href="https://www.interaction-design.org/literature/article/don-t-build-it-fake-it-first-prototyping-for-mobile-apps" target="_blank" rel="noopener">对应文章</a>；</p>
+<p>第二部分，测试和评估<br>7，如何从原型测试中收集反馈，<a href="https://www.interaction-design.org/literature/article/test-your-prototypes-how-to-gather-feedback-and-maximise-learning" target="_blank" rel="noopener">对应文章</a>；<br>8，如何从测试中获得更多真实反馈，<a href="https://www.interaction-design.org/literature/article/how-to-get-more-honest-feedback-in-user-testing" target="_blank" rel="noopener">对应文章</a>；<br>9，如何进行启发式评估，<a href="https://www.interaction-design.org/literature/article/heuristic-evaluation-how-to-conduct-a-heuristic-evaluation" target="_blank" rel="noopener">对应文章</a>；<br>10，如何进行URUT测试，<a href="https://www.interaction-design.org/literature/article/unmoderated-remote-usability-testing-urut-every-step-you-take-we-won-t-be-watching-you" target="_blank" rel="noopener">对应文章</a>；<br>11，如何确保原型上线的可行性，<a href="https://www.interaction-design.org/literature/article/from-prototype-to-product-ensuring-your-solution-is-feasible-and-viable" target="_blank" rel="noopener">对应文章</a>。</p>
+<p>最后，可以通过<a href="https://www.designbetter.co/design-thinking" target="_blank" rel="noopener">designbetter的手册</a>回顾下设计思维。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Once
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://whuxai.com/2019/08/22/A2-设计思维/" title="A2-设计思维">https://whuxai.com/2019/08/22/A2-设计思维/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/UX/" rel="tag"># UX</a>
+          
+            <a href="/tags/Design-Thinking/" rel="tag"># Design Thinking</a>
+          
+            <a href="/tags/设计思维/" rel="tag"># 设计思维</a>
+          
+            <a href="/tags/迭代流程/" rel="tag"># 迭代流程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/21/A1-用户体验/" rel="next" title="A1-用户体验">
+                <i class="fa fa-chevron-left"></i> A1-用户体验
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/23/A3-Affordance可供性/" rel="prev" title="A3-Affordance可供性">
+                A3-Affordance可供性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Once">
+          <p class="site-author-name" itemprop="name">Once</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/dN72lUjiTPcyEkZN/" title="UX大会" target="_blank">UX大会</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/i6xzBXPMDZwQ663r/" title="UX狮群" target="_blank">UX狮群</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/wvEWwNm5ZXMFEkst/" title="UX书单" target="_blank">UX书单</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/mcnJah3QMhoDuglJ/" title="UX课程" target="_blank">UX课程</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一，设计思维定义"><span class="nav-number">1.</span> <span class="nav-text">一，设计思维定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二，设计思维实践"><span class="nav-number">2.</span> <span class="nav-text">二，设计思维实践</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三，Empathise你的目标用户"><span class="nav-number">3.</span> <span class="nav-text">三，Empathise你的目标用户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四，明确设计挑战"><span class="nav-number">4.</span> <span class="nav-text">四，明确设计挑战</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五，构思"><span class="nav-number">5.</span> <span class="nav-text">五，构思</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六，原型和测试"><span class="nav-number">6.</span> <span class="nav-text">六，原型和测试</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Once</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="UX,Don Norman,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="珈山体工队" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="提出用户体验这个名词的Don Norman认为：用户体验是你如何认识这个世界，是你如何体验你的生活，是你如何享受服务，不只是某个软件、网站或APP，是一个更加全面的体系，覆盖多个不同的领域；理解这些不同的领域，在你从事用户体验工作时，就会知道如何用好相关工具。本章节概括汇总了其他很多章节的内容，即是对用户体验的概括介绍，也明确了用户体验设计给产品带来的价值，又罗列了工作所需的关键知识点。">
+<meta name="keywords" content="UX,Don Norman">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A1-用户体验">
+<meta property="og:url" content="https://whuxai.com/2019/08/21/A1-用户体验/index.html">
+<meta property="og:site_name" content="珈山体工队">
+<meta property="og:description" content="提出用户体验这个名词的Don Norman认为：用户体验是你如何认识这个世界，是你如何体验你的生活，是你如何享受服务，不只是某个软件、网站或APP，是一个更加全面的体系，覆盖多个不同的领域；理解这些不同的领域，在你从事用户体验工作时，就会知道如何用好相关工具。本章节概括汇总了其他很多章节的内容，即是对用户体验的概括介绍，也明确了用户体验设计给产品带来的价值，又罗列了工作所需的关键知识点。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-04T11:00:52.015Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A1-用户体验">
+<meta name="twitter:description" content="提出用户体验这个名词的Don Norman认为：用户体验是你如何认识这个世界，是你如何体验你的生活，是你如何享受服务，不只是某个软件、网站或APP，是一个更加全面的体系，覆盖多个不同的领域；理解这些不同的领域，在你从事用户体验工作时，就会知道如何用好相关工具。本章节概括汇总了其他很多章节的内容，即是对用户体验的概括介绍，也明确了用户体验设计给产品带来的价值，又罗列了工作所需的关键知识点。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://whuxai.com/2019/08/21/A1-用户体验/">
+
+
+
+
+
+  <title>A1-用户体验 | 珈山体工队</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">珈山体工队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://whuxai.com/2019/08/21/A1-用户体验/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Once">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="珈山体工队">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">A1-用户体验</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-21T21:00:00+08:00">
+                2019-08-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-04T19:00:52+08:00">
+                2019-09-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/UX-学习课程/" itemprop="url" rel="index">
+                    <span itemprop="name">UX 学习课程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>提出用户体验这个名词的Don Norman认为：用户体验是你如何认识这个世界，是你如何体验你的生活，是你如何享受服务，不只是某个软件、网站或APP，是一个更加全面的体系，覆盖多个不同的领域；理解这些不同的领域，在你从事用户体验工作时，就会知道如何用好相关工具。<br>本章节概括汇总了其他很多章节的内容，即是对用户体验的概括介绍，也明确了用户体验设计给产品带来的价值，又罗列了工作所需的关键知识点。</p>
+<a id="more"></a>
+
+<h1 id="一，用户体验概论"><a href="#一，用户体验概论" class="headerlink" title="一，用户体验概论"></a>一，用户体验概论</h1><p>第1部分，基本上是引用Don Norman的观点，<br>1，什么是用户体验，可以参考<a href="https://www.interaction-design.org/literature/topics/ux-design" target="_blank" rel="noopener">IDF上的这个话题介绍</a>；也可以查看NN/g上诺曼和尼尔森的文章，<a href="https://www.nngroup.com/articles/definition-user-experience/" target="_blank" rel="noopener">UX的定义</a>或 <a href="https://www.youtube.com/watch?v=9BdtGjoIN4E" target="_blank" rel="noopener">视频</a> ；<br>2，Why Now UX？我想WHY关联的应该是ROI，重视用户体验的投资回报；NOW关联的应该是UX伴随着科技发展的历程。<br>看UX的ROI之前，可以先了解下设计管理学院DMI提出的<a href="https://www.dmi.org/page/DesignValue" target="_blank" rel="noopener">设计的价值</a>；<br>而UX的ROI，可以参考尼尔森2003年写的 *<a href="https://www.nngroup.com/articles/return-on-investment-for-usability/" target="_blank" rel="noopener">可用性的ROI</a>*，IDF上也有几篇相关的文章：特别是 <a href="https://www.interaction-design.org/literature/article/improve-customer-experience-with-ux-investments-that-increase-roi" target="_blank" rel="noopener">Improve Customer Experience with UX Investments that Increase ROI</a>，再顺带看看<a href="https://www.interaction-design.org/literature/article/the-roi-of-ux-some-basic-metrics" target="_blank" rel="noopener">Some Basic Metrics</a>，<a href="https://www.interaction-design.org/literature/article/the-roi-of-ux-customer-conversions" target="_blank" rel="noopener">Customer Conversions</a>，<a href="https://www.interaction-design.org/literature/article/the-roi-of-ux-scpu-support-cost-per-user" target="_blank" rel="noopener">SCPU (Support Cost Per User)</a> 和 <a href="https://www.interaction-design.org/literature/article/the-roi-of-ux-arpu-average-revenue-per-user" target="_blank" rel="noopener">ARPU (Average Revenue Per User)</a>。</p>
+<p>适当补充下benefits：<br>直接的诸如</p>
+<ul>
+<li>meet the user’s needs — If your users are involved in the design process then your final product should meet their needs. That should deliver a more commercially viable offering and thus higher levels of profit for the company.</li>
+<li>require less tinkering after release — It’s cheaper and easier to tweak sketches, wireframes and prototypes than it is to tweak a product after launch. UX enables a company to work out what doesn’t work and then abandon it before the development phase rather than after.</li>
+<li>less risky to the business’s reputation — UX is a quality measure. When you release products that users love to use and that meet their needs; your business reputation will grow. Conversely if you don’t get things right — your reputation will fall.</li>
+<li>relatively immune to scope creep — If you define the user’s needs and then design with them in mind; there should be a whole lot less scope creep and that makes it easier to budget for a project and to define a delivery timetable.</li>
+<li>competitive — the research phase of UX means that you should know what competitors are doing and how your product will be “better”. Design in this manner is based on the evidence and not on the “gut instincts” of the development team.</li>
+</ul>
+<p>间接的包括：</p>
+<ul>
+<li>Lower costs to the business of product development — Well defined projects which are on time and on budget are less expensive than those that are continually redefined.</li>
+<li>Customer satisfaction — If the UX for a product is high then you’ll have happy customers reducing the burden on both support teams and customer services.</li>
+<li>Increased Net Promoter Score</li>
+<li>Reduction of knowledge gaps between teams and client, client and market, etc</li>
+<li>Higher task completion rate - more people would be able to use what you’re working on</li>
+<li>Customer loyalty increase</li>
+<li>Decisions are made with lots of relevant information instead of guesswork, so the chances of success exponentially increase.</li>
+</ul>
+<p>UX的发展历程，可以参考尼尔森2017年写的 *<a href="https://www.nngroup.com/articles/100-years-ux/" target="_blank" rel="noopener">A 100-Year View of User Experience</a>*；</p>
+<p>3，客户的选择确认<br>可以参考<a href="https://www.smashingmagazine.com/2013/02/sell-design-solution-clients/" target="_blank" rel="noopener">smashing magazine上的文章</a>；<br>sell的方式和技巧，可以参考<a href="https://www.uxmatters.com/mt/archives/2008/10/selling-ux.php" target="_blank" rel="noopener">UXmatters的文章</a>，一些<a href="https://www.interaction-design.org/literature/article/10-ideas-to-help-you-sell-ux-work" target="_blank" rel="noopener">观点</a>和<a href="https://uxmastery.com/20-tips-selling-ux-clients/" target="_blank" rel="noopener">tips</a>；</p>
+<p>第2部分，理解用户体验，基本上是<a href="http://www.marc-hassenzahl.de" target="_blank" rel="noopener">Marc Hassenzahl</a> 的观点。他是</p>
+<blockquote>
+<p>Professor at the Folkwang University in Essen and research manager at MediaCity, Šbo Akademi University, Vaasa, Finland. He is interested in the positive affective and motivational aspects of interactive technologies - in short: User Experience</p>
+</blockquote>
+<p>1，这部分有对应的文章和视频，<a href="https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/user-experience-and-experience-design" target="_blank" rel="noopener">文章链接</a></p>
+<ul>
+<li>用户体验的介绍，<a href="https://www.youtube.com/watch?v=lEvhxJKTQK8" target="_blank" rel="noopener">对应视频</a>；</li>
+<li>体验设计的规范，对应视频<a href="https://www.youtube.com/watch?v=eCpp0W-znJ0" target="_blank" rel="noopener">【1】</a>和<a href="https://www.youtube.com/watch?v=Iavwj4bqweQ" target="_blank" rel="noopener">【2】</a>；</li>
+<li>体验设计的未来，<a href="https://www.youtube.com/watch?v=REj3JUjZnRg" target="_blank" rel="noopener">对应视频</a>；</li>
+</ul>
+<p>体验的示例探讨也是基于视频中Marc提到的例子。<br>2，用户体验-Marc带着体验思维做设计的建议，<a href="https://www.youtube.com/watch?v=eCpp0W-znJ0" target="_blank" rel="noopener">对应视频</a>；<br>3，用户体验-Marc主要准则和伦理考虑，<a href="https://www.youtube.com/watch?v=Iavwj4bqweQ" target="_blank" rel="noopener">对应视频</a>；</p>
+<h1 id="二，用户研究、可用性和UCD"><a href="#二，用户研究、可用性和UCD" class="headerlink" title="二，用户研究、可用性和UCD"></a>二，用户研究、可用性和UCD</h1><p>用户研究、可用性的部分，后面还有专门章节，所以这里只是概括介绍相关知识点和范围。<br>另外empathy作为设计思维的一部分会在设计思维的章节详细介绍，以用户为中心的设计也会再后续章节中多次提及。</p>
+<p>1，用户研究的部分，可以通过IDF的<a href="https://www.interaction-design.org/literature/article/user-research-what-it-is-and-why-you-should-do-it" target="_blank" rel="noopener">课程对应文章</a>做个了解，针对方法和思路，<a href="https://careerfoundry.com/en/blog/ux-design/the-importance-of-user-research-and-how-to-do-it/" target="_blank" rel="noopener">做个补充</a>，顺带了解下，在<a href="https://medium.com/design-ibm/the-vital-role-of-user-research-8c2f51a9cead" target="_blank" rel="noopener">实际工作中的重要角色</a>。<br>2，empathy gap，很流行的一句就是“你不是用户”，这个gap存在，好的是可以跳出来观察分析；不足的是可能会有遗漏或者不能覆盖的部分导致观察分析的不够全面。<br>empathy最初是个精神分析领域的词汇，可以看<a href="https://en.wikipedia.org/wiki/Empathy" target="_blank" rel="noopener">wiki上的定义</a>，可以<a href="https://www.habitsforwellbeing.com/the-four-attributes-of-empathy/" target="_blank" rel="noopener">看个小视频</a>了解下；<br>涉及到设计领域，可以通过 <em><a href="https://uxmag.com/articles/what-is-empathy" target="_blank" rel="noopener">what is empathy</a></em> 和 <em><a href="https://www.interaction-design.org/literature/article/design-thinking-getting-started-with-empathy" target="_blank" rel="noopener">start with empathy</a></em> 两篇文章，做个初步了解，因为后续empathy作为design thinking的重要环节，会不断的再次提及。<br>同时意识到这个gap的存在，为了清晰明确能够empathy到的信息，可以了解和使用<a href="https://www.nngroup.com/articles/empathy-mapping/" target="_blank" rel="noopener">empathy map</a>，或者<a href="https://medium.com/the-xplane-collection/updated-empathy-map-canvas-46df22df3c8a" target="_blank" rel="noopener">升级版移情画布</a>；也可以用 jouney map 用来提升empathy，<a href="https://uxplanet.org/journey-mapping-is-key-to-gaining-empathy-1da5b54655e1" target="_blank" rel="noopener">对应文章</a>；<br>3，可用性，可以先看IDF上的这篇 <a href="https://www.interaction-design.org/literature/article/an-introduction-to-usability" target="_blank" rel="noopener">可用性介绍</a>，再参考<a href="https://www.interaction-design.org/literature/article/usability-a-part-of-the-user-experience" target="_blank" rel="noopener">IDF上对应的文章</a>；<br>4，以用户为中心的设计，可以参考<a href="https://www.interaction-design.org/literature/topics/user-centered-design" target="_blank" rel="noopener">IDF上的这个话题介绍</a>；以及William Hudson的<a href="https://www.youtube.com/watch?v=RZ3up_zIgXI&list=UUeEe63o5StRQ7KRGsSOL1_A" target="_blank" rel="noopener">视频介绍</a>；</p>
+<h1 id="三，情绪、体验和情感化设计"><a href="#三，情绪、体验和情感化设计" class="headerlink" title="三，情绪、体验和情感化设计"></a>三，情绪、体验和情感化设计</h1><p>第1部分，情感化设计<br>看到《情感化设计》这本书的应该对这块很熟悉，看课程的时长分布，应该是大概讲讲概念和示例，过一遍，有这个意识。基本上看IDF上面的文章即可：<a href="https://www.interaction-design.org/literature/article/donald-norman-s-three-levels-of-design" target="_blank" rel="noopener">【1】</a>，<a href="https://www.interaction-design.org/literature/article/norman-s-three-levels-of-design" target="_blank" rel="noopener">【2】</a>，<a href="https://www.interaction-design.org/literature/article/the-reflective-level-of-emotional-design" target="_blank" rel="noopener">【3】</a>，还可以看<a href="https://www.uxmatters.com/mt/archives/2005/11/personas-goals-and-emotional-design.php" target="_blank" rel="noopener">UXmatters的一篇文章</a>。在了解的过程中，可以自己回想一些案例。</p>
+<p>第2部分，情绪和体验<br>主要是讲emotion和体验的关系，这个emotion是情感或者情绪，课程安排上应该还是视频居多，但是这节课完全没有搜到相关文章，只能按照猜测的情况，来汇总了。我认为这节课算是为后续高级课程的心理学相关方面做铺垫。<br>后来发现，这部分其实是Alan Dix录制的<a href="https://vimeo.com/user13215218" target="_blank" rel="noopener">视频课程</a>。</p>
+<p>1，emotions in systems，<br>我有两种理解，1是emotion体系，2是操作系统时涉及的emotions，<br>那第1种理解，emotion体系，先看<a href="https://en.wikipedia.org/wiki/Emotion" target="_blank" rel="noopener">wiki</a>，可以对于emotion的种类做个了解，或则看看<a href="http://www.iep.utm.edu/emotion/" target="_blank" rel="noopener">田纳西大学</a>、<a href="https://plato.stanford.edu/entries/emotion/" target="_blank" rel="noopener">斯坦福大学</a>心理学词典对此的介绍；<br>对于emotion system，我看了Jaak Panksepp的三个视频：<a href="https://www.youtube.com/watch?v=65e2qScV_K8" target="_blank" rel="noopener">【1】</a>、<a href="https://www.youtube.com/watch?v=M_YqvtJIRtY" target="_blank" rel="noopener">【2】</a>和<a href="https://www.youtube.com/watch?v=zRMGj8QiVCk" target="_blank" rel="noopener">【3】</a>；<br>还有一个Dr Jessica Bolton受其影响而建立的 <a href="http://emotionalsystems.info/emotional-systems/" target="_blank" rel="noopener">emotional systems</a> ，可以了解下seek和play system等等。</p>
+<p>第2种理解，操作系统时涉及的emotions，没有找到合适的内容，可以参考下uxmatters上的文章：<em><a href="https://www.uxmatters.com/mt/archives/2006/09/from-gui-to-emotional-ui.php" target="_blank" rel="noopener">from gui to emotional ui</a></em> ，<em><a href="https://www.uxmatters.com/mt/archives/2014/10/user-experience-is-a-feeling.php" target="_blank" rel="noopener">user experience is a feeling</a></em> 和 <em><a href="https://www.uxmatters.com/mt/archives/2018/05/designing-for-emotion.php" target="_blank" rel="noopener">designing for emotion</a></em> ；<br>当然也有可能emotions in systems 是以上两种理解的概括。</p>
+<p>2，Application Areas，参见Alan Dix录制的HCI相关课程的视频<a href="https://vimeo.com/52479487" target="_blank" rel="noopener">【1】</a>和<a href="https://vimeo.com/52482027" target="_blank" rel="noopener">【2】</a>；<br>3，Crackers Case Study，<a href="http://class.hcicourse.com/items/E05DF175-BB3B-00A2-28DF-A70A638F47B0.html" target="_blank" rel="noopener">对应视频</a>；<br>4，为Peak Experience设计<br>这里两个点：1是马斯洛提的Peak Experience，2是如何为Peak Experience设计<br>第1点，可以看视频，也可以看相关的书，看看马斯洛说了什么，视频片段<a href="https://www.youtube.com/watch?v=zcOHMGe7lYg" target="_blank" rel="noopener">【1】</a>和<a href="https://www.youtube.com/watch?v=YT1QEzBLR4k" target="_blank" rel="noopener">【2】</a>；<br>第2点，也可以看<a href="https://www.youtube.com/watch?v=-OTtkI5f0u8" target="_blank" rel="noopener">斯坦福的一个视频</a>，顺带提前了解下design thinking相关内容。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Once
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://whuxai.com/2019/08/21/A1-用户体验/" title="A1-用户体验">https://whuxai.com/2019/08/21/A1-用户体验/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/UX/" rel="tag"># UX</a>
+          
+            <a href="/tags/Don-Norman/" rel="tag"># Don Norman</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/20/UX Read Me/" rel="next" title="UX的回顾课">
+                <i class="fa fa-chevron-left"></i> UX的回顾课
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/22/A2-设计思维/" rel="prev" title="A2-设计思维">
+                A2-设计思维 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Once">
+          <p class="site-author-name" itemprop="name">Once</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/dN72lUjiTPcyEkZN/" title="UX大会" target="_blank">UX大会</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/i6xzBXPMDZwQ663r/" title="UX狮群" target="_blank">UX狮群</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/wvEWwNm5ZXMFEkst/" title="UX书单" target="_blank">UX书单</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shimo.im/docs/mcnJah3QMhoDuglJ/" title="UX课程" target="_blank">UX课程</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一，用户体验概论"><span class="nav-number">1.</span> <span class="nav-text">一，用户体验概论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二，用户研究、可用性和UCD"><span class="nav-number">2.</span> <span class="nav-text">二，用户研究、可用性和UCD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三，情绪、体验和情感化设计"><span class="nav-number">3.</span> <span class="nav-text">三，情绪、体验和情感化设计</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Once</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
